@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW POST</title>
+    <style>
+ /* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #39426a, #e2e7f1);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Header */
+.heading {
+    font-size: 3.5rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    font-weight: 800;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Card */
+.posts {
+    background: #ffffff;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+    border-left: 6px solid #3498db;
+    position: relative;
+    overflow: hidden;
+}
+
+.posts:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.posts h3 {
+    color: #2980b9;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.posts h4 {
+    color: #444;
+    font-size: 1.15rem;
+    font-weight: normal;
+    line-height: 1.8;
+}
+
+.posts a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.posts a:hover {
+    background: linear-gradient(135deg, #27ae60, #219150);
+    transform: translateY(-3px);
+}
+
+/* Form Styles */
+form {
+    background: #ffffff;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+form:hover {
+    transform: scale(1.03);
+}
+
+/* Input and Textarea Styles */
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+input:focus, textarea:focus {
+    border-color: #2ecc71;
+    outline: none;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
+    background-color: #ffffff;
+}
+
+/* Input Placeholder */
+input::placeholder, textarea::placeholder {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Textarea Specific Styling */
+textarea {
+    height: 150px;
+    resize: none;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/* Input Border Radius on Hover */
+input:hover, textarea:hover {
+    border-color: #2980b9;
+}
+
+/* Additional Styles for Larger Input Fields */
+input[type="text"], textarea {
+    max-width: 100%;
+}
+
+
+input:focus, textarea:focus {
+    border-color: #2ecc71;
+    outline: none;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.4);
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #c0392b, #a83226);
+    transform: translateY(-3px);
+}
+
+
+
+    </style>
+</head>
+<body>
+    <form method="post" action="/posts">
+        <input placeholder="Enter Username" name="username" /><br><br>
+<textarea placeholder="Enter your thoughts" name="content" ></textarea><br><br>
+<button>Submit post</button>
+
+    </form>
+
+
+    
+</body>
+</html>

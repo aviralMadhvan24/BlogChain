@@ -1,0 +1,90 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #eef2f3, #dce1e3);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 3rem;
+    color: #2c3e50;
+
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.posts {
+    background: #ffffff;
+    max-width: 650px;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+    border-left: 6px solid #3498db;
+    position: relative;
+    overflow: hidden;
+}
+
+.posts:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.posts h3 {
+    color: #2980b9;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.posts h4 {
+    color: #444;
+    font-size: 1.2rem;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+.posts a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.posts a:hover {
+    background: linear-gradient(135deg, #27ae60, #219150);
+    transform: translateY(-3px);
+}
+
+/* Add Post Button */
+a[href*="/posts/new"] {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 3px 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+a[href*="/posts/new"]:hover {
+    background: linear-gradient(135deg, #c0392b, #a83226);
+    transform: translateY(-3px);
+}
