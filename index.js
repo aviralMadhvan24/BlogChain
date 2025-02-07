@@ -8,13 +8,18 @@ app.set('view engine','ejs');
 app.set("views",path.join(__dirname,'views'))
 app.use(express.static(path.join(__dirname,'public')))
 app.use(express.urlencoded({extended:true}))
+const methodoverride = require('method-override')
+app.use(methodoverride('_method'))
 
-
-
+app.get('/posts/:id/edit',(req,res)=>{
+    let {id } = req.params;
+    let post = posts.find((p) => id === p.id);
+    res.render('edit.ejs',{post});
+})
 
 let posts = [{
     id: uuidv4(),
-    username: 'apnacollege',
+    username: 'Ashok',
     content:'i love coding'
 },{
  id: uuidv4(),
@@ -50,10 +55,19 @@ app.post('/posts',(req,res)=>{
 })
 app.patch('/posts/:id',(req,res)=>{
     let {id } = req.params;
-    console.log(id);
-    res.send('patch request working')
+   let newContent = req.body.content;
+   let post = posts.find((p)=> id === p.id)
+   post.content = newContent
+   res.redirect("/posts")
+ 
 })
 
+app.delete("/posts/:id",(req,res)=>{
+    let {id } = req.params;
+     posts = posts.filter((p)=> id !== p.id)
+   
+     res.redirect("/posts")
+})
 
 
 app.listen(port,()=>{

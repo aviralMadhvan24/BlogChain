@@ -6,6 +6,27 @@
     <title>Posts</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+    button{
+        display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    border-style: none;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    button:hover{
+        background: linear-gradient(135deg, #27ae60, #219150);
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+</style>
 <body>
     <h1 class="heading">BlogChain</h1>
 
@@ -14,6 +35,12 @@
     <h3>@<%= post.username %></h3>
     <h4><%= post.content%></h4><br>
     <a href="http://localhost:8080/posts/<%=post.id %>">Go to this post</a>
+    <a href="http://localhost:8080/posts/<%=post.id %>/edit">Edit</a>
+   <form action="/posts/<%= post.id %>?_method=DELETE" method="post">
+    <button >Delete</button>
+   </form>
+    
+
 </div>
    <% }%>
    <a href="http://localhost:8080/posts/new">Add new post</a>
